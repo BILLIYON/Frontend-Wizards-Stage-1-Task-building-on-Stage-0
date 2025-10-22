@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Wizards | Profile Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <article data-testid="test-profile-card">
+    <figure>
+      <img
+        src="https://i.pravatar.cc/200"
+        alt="Profile photo"
+        data-testid="test-user-avatar"
+      />
+    </figure>
+    <header>
+      <h2 data-testid="test-user-name">John Billon</h2>
+    </header>
+    <p data-testid="test-user-bio">
+      Cloud enthusiast and DevOps learner passionate about automation, innovation, and simplicity.
+    </p>
+    <p data-testid="test-user-time"></p>
+
+    <nav data-testid="test-user-social-links">
+      <a href="https://twitter.com" data-testid="test-user-social-twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <a href="https://github.com" data-testid="test-user-social-github" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+
+    <section data-testid="test-user-hobbies">
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Cloud Projects</li>
+        <li>Reading Tech Blogs</li>
+        <li>Music</li>
+      </ul>
+    </section>
+
+    <section data-testid="test-user-dislikes">
+      <h3>Dislikes</h3>
+      <ul>
+        <li>Unclear Documentation</li>
+        <li>Slow Wi-Fi</li>
+      </ul>
+    </section>
+  </article>
+
+  <script>
+    document.querySelector('[data-testid="test-user-time"]').textContent = Date.now();
+  </script>
+</body>
+</html>
